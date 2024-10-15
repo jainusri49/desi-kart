@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desi-cart - Home</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="about.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="bg-light"> 
+      <div
+        class="container d-flex justify-content-between align-items-center py-3"
+      >
+      <!-- <a href="home.html" style="font-weight: bold; color: black; font-size: larger; text-decoration: none;">Desi-Cart</a> -->
+      <a href="home.html" >  <img src="dellImages/Desi-cart.jpeg" style="border-radius: 30px; width: 40%;" alt="Desi-cart"> </a>
+        <!-- <input
+          type="text"
+          class="form-control w-25"
+          placeholder="Search for products..."
+        /> -->
+
+        <div class="links">
+          <a href="home.html">Home</a>
+          <div class="products">
+            <a href="products.html">Products</a>
+            <div class="dropdown">
+              <a href="dell.html" class="">Dell Laptops</a>
+            </div>
+          </div>
+          <a href="about.html" class="active">About</a>
+          <!-- <a href="contact.html">Contact</a> -->
+        </div>
+
+        <div>
+          <a href="#" class="btn btn-outline-secondary" id="logOut">Log Out</a>
+          <!-- <a href="#" class="btn btn-outline-primary">Cart</a> -->
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="about-intro">
+          <h2>Welcome to Desi-cart!</h2>
+          <p>At Desi-cart, we believe in making technology accessible and affordable for everyone. As a premier e-commerce platform, we specialize in providing top-quality laptops and tech accessories tailored to meet the diverse needs of our customers.</p>
+          <p>Our extensive range includes the latest models from leading brands, ensuring you find the perfect device for work, study, or play.</p>
+      </section>
+  
+      <section class="mission">
+          <h2>Our Mission</h2>
+          <p>Our mission is simple: to deliver exceptional products while ensuring a seamless shopping experience. We strive to offer:</p>
+          <ul>
+              <li>High-quality products that meet rigorous standards.</li>
+              <li>Competitive pricing to provide maximum value.</li>
+              <li>Reliable customer service that assists you every step of the way.</li>
+          </ul>
+      </section>
+  
+      <section class="values">
+          <h2>Our Values</h2>
+          <ul>
+              <li><strong>Customer-Centric:</strong> We prioritize our customers and strive to exceed their expectations.</li>
+              <li><strong>Integrity:</strong> Honesty and transparency are at the core of our business practices.</li>
+              <li><strong>Innovation:</strong> We embrace new technologies to enhance our product offerings and user experience.</li>
+              <li><strong>Sustainability:</strong> We are committed to sustainable practices that reduce our environmental impact.</li>
+          </ul>
+      </section>
+  
+      <section class="team">
+          <h2>Meet Our Team</h2>
+          <p>Our passionate and dedicated team is the backbone of Desi-cart. Together, we work to ensure that your shopping experience is enjoyable and fulfilling.</p>
+          <div class="team-members">
+              <div class="member">
+                  <h3>John Doe</h3>
+                  <p><em>Founder & CEO</em></p>
+                  <p>With a vision to empower customers through technology, John leads Desi-cart with passion and innovation.</p>
+              </div>
+              <div class="member">
+                  <h3>Jane Smith</h3>
+                  <p><em>Product Manager</em></p>
+                  <p>Jane curates our product selection, ensuring we offer only the best laptops and accessories available.</p>
+              </div>
+              <div class="member">
+                  <h3>Emily Johnson</h3>
+                  <p><em>Customer Support Lead</em></p>
+                  <p>Emily and her team are dedicated to providing top-notch support to all our customers, resolving queries efficiently.</p>
+              </div>
+          </div>
+      </section>
+  
+      <section class="contact" id="get-in-touch">
+          <h2>Get in Touch</h2>
+          <p>We love to hear from our customers! Whether you have a question about a product or need assistance, feel free to reach out:</p>
+          <ul>
+              <li> <b style="color:black; font-size: larger;">Email:</b> <a href="mailto:support@desi-cart.com">support@desi-cart.com</a></li>
+              <li><b style="color: black; font-size: larger;">Phone: </b><a href="tel:+91 9015456804">+91 9015456804</a></li>
+              <li>Follow us on social media for updates and promotions!</li>
+          </ul>
+      </section>
+  </main>
+  
+  
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+      <p>&copy; 2024 Desi-cart. All rights reserved.</p>
+      <p>
+        <a href="#" class="text-white">Customer Service</a> |
+        <a href="#" class="text-white">Privacy Policy</a> |
+        <a href="#" class="text-white">FAQs</a>
+      </p>
+    </footer>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+  <script src="indexScript.js"></script>
+
+  <script>
+    // Countdown Timer (Optional)
+    const countdownTimer = document.getElementById("countdown-timer");
+    let timerDuration = 2 * 60 * 60; // 2 hours in seconds
+
+    const updateTimer = () => {
+      const hours = Math.floor(timerDuration / 3600);
+      const minutes = Math.floor((timerDuration % 3600) / 60);
+      const seconds = timerDuration % 60;
+
+      countdownTimer.innerHTML = `${String(hours).padStart(2, "0")}:${String(
+        minutes
+      ).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+
+      if (timerDuration > 0) {
+        timerDuration--;
+      } else {
+        clearInterval(timerInterval);
+      }
+    };
+
+    const timerInterval = setInterval(updateTimer, 1000);
+  </script>
+
+</html>

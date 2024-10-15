@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laptop Order Page</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="stylesheet" href="dell.css" />
+
+    <style>
+      .laptop-card {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bg-light">
+      <div
+        class="container d-flex justify-content-between align-items-center py-3"
+      >
+        <!-- <a
+          href="home.html"
+          style="
+            font-weight: bold;
+            color: black;
+            font-size: larger;
+            text-decoration: none;
+          "
+          >Desi-Cart</a
+        > -->
+        <a href="home.html">
+          <img
+            src="dellImages/Desi-cart.jpeg"
+            style="border-radius: 30px; width: 40%"
+            alt="Desi-cart"
+          />
+        </a>
+
+        <div class="links">
+          <a href="home.html">Home</a>
+          <div class="products">
+            <a href="products.html" class="active">Products</a>
+            <div class="dropdown">
+              <a href="#" class="">Dell Laptops</a>
+            </div>
+          </div>
+          <a href="about.html">About</a>
+          <!-- <a href="contact.html">Contact</a> -->
+        </div>
+
+        <div>
+          <a href="#" class="btn btn-outline-secondary" id="logOut">Log Out</a>
+          <!-- <a href="#" class="btn btn-outline-primary">Cart</a> -->
+        </div>
+      </div>
+    </header>
+
+    <div class="container mt-5">
+      <h2 class="text-center mb-4">Order Your Laptop</h2>
+
+      <div class="row">
+        <!-- Laptop Item 1 -->
+        <div class="col-md-4 laptop-card" id="oneDiv">
+          <div class="card" style="border-radius: 10px">
+            <img
+              src="./dellImages/Dell 1.jpeg"
+              class="card-img-top"
+              alt="Laptop 1"
+              style="
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              "
+            />
+            <div
+              class="card-body"
+              style="background-color: aliceblue; border-radius: 10px"
+            >
+              <h5 class="card-title">Dell Precision 5540</h5>
+              <p style="width: 80%">Core i3, 7th Gen (8GB RAM/512GB SSD)</p>
+              <p><strong>Price:</strong> Rs. 19999</p>
+              <button
+                class="btn btn-primary"
+                id="openLaptopOne"
+                data-toggle="modal"
+                data-target="#orderModal"
+                data-title="Dell Precision 5540"
+                data-details="Core i3, 7th Gen (8GB RAM/512GB SSD), Rs. 19999"
+              >
+                Order Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Laptop Item 2 -->
+        <div class="col-md-4 laptop-card" id="twoDiv">
+          <div class="card" style="border-radius: 10px">
+            <img
+              src="./dellImages/Dell 2.jpeg"
+              class="card-img-top"
+              alt="Laptop 2"
+              style="
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              "
+            />
+            <div
+              class="card-body"
+              style="background-color: aliceblue; border-radius: 10px"
+            >
+              <h5 class="card-title">Dell Precision 7730</h5>
+              <p style="width: 80%">
+                Core i5, 8th Gen (16GB RAM/512GB SSD) 4GB Nvidia Quadro T1000
+                Graphics 15.6” Screen
+              </p>
+              <p><strong>Price:</strong> Rs. 20999</p>
+              <button
+                class="btn btn-primary"
+                id="openLaptopTwo"
+                data-toggle="modal"
+                data-target="#orderModal"
+                data-title="Dell Precision 7730"
+                data-details="Core i5, 8th Gen (16GB RAM/512GB SSD), Rs. 20999"
+              >
+                Order Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Laptop Item 3 -->
+        <div class="col-md-4 laptop-card" id="threeDiv">
+          <div class="card" style="border-radius: 10px">
+            <img
+              src="./dellImages/dell3.jpeg"
+              class="card-img-top"
+              alt="Laptop 3"
+              style="
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+              "
+            />
+            <div
+              class="card-body"
+              style="background-color: aliceblue; border-radius: 10px"
+            >
+              <h5 class="card-title">Dell Laptop</h5>
+              <p style="width: 80%">
+                Core i7, 9th Gen (32GB RAM/ 1TB) 6GB Nvidia Quadro P3200
+                Graphics 17" Screen
+              </p>
+              <p><strong>Price:</strong> Rs. 22999</p>
+              <button
+                class="btn btn-primary"
+                id="openLaptopThree"
+                data-toggle="modal"
+                data-target="#orderModal"
+                data-title="Dell Laptop"
+                data-details="Core i7, 9th Gen (32GB RAM/512GB SSD), Rs. 22999"
+              >
+                Order Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="orderModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="orderModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="orderModalLabel">
+              Fill Laptop Order Form
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h5 id="laptopTitle"></h5>
+            <p id="laptopDetails"></p>
+            <form id="orderForm">
+              <div class="form" style="background-color: rgb(241, 245, 240)">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone No.</label>
+                  <input type="tel" class="form-control" id="phone" required />
+                </div>
+                <div class="form-group">
+                  <label for="address">Address</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="address"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    required
+                  />
+                </div>
+                <div
+                  style="width: 100%; display: flex; justify-content: center"
+                >
+                  <button
+                    type="submit"
+                    class="btn btn-success"
+                    style="margin-bottom: 15px"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+      <p>&copy; 2024 Desi-cart. All rights reserved.</p>
+      <p>
+        <a href="#" class="text-white">Customer Service</a> |
+        <a href="#" class="text-white">Privacy Policy</a> |
+        <a href="#" class="text-white">FAQs</a>
+      </p>
+    </footer>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $("#orderModal").on("show.bs.modal", function (event) {
+      var button = $(event.relatedTarget); // Button that triggered the modal
+      var title = button.data("title"); // Extract info from data-* attributes
+      var details = button.data("details");
+
+      var modal = $(this);
+      modal.find("#laptopTitle").text(title);
+      modal.find("#laptopDetails").text(details);
+    });
+
+    $("#orderForm").on("submit", function (e) {
+      e.preventDefault();
+      // You can add form submission logic here
+      alert("Order submitted successfully!");
+      $("#orderModal").modal("hide");
+    });
+  </script>
+
+  <script>
+    const laptopOne = document.getElementById("openLaptopOne");
+    laptopOne.addEventListener("click", function () {
+      window.location.href = "laptop1.html";
+    });
+    const laptopTwo = document.getElementById("openLaptopTwo");
+    laptopTwo.addEventListener("click", function () {
+      window.location.href = "laptop2.html";
+    });
+    const laptopThree = document.getElementById("openLaptopThree");
+    laptopThree.addEventListener("click", function () {
+      window.location.href = "laptop3.html";
+    });
+  </script>
+
+  <script>
+    const oneDiv = document.getElementById("oneDiv");
+    oneDiv.addEventListener("click", function () {
+      window.location.href = "laptop1.html";
+    });
+    const twoDiv = document.getElementById("twoDiv");
+    twoDiv.addEventListener("click", function () {
+      window.location.href = "laptop2.html";
+    });
+    const threeDiv = document.getElementById("threeDiv");
+    threeDiv.addEventListener("click", function () {
+      window.location.href = "laptop3.html";
+    });
+  </script>
+</html>

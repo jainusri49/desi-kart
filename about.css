@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(102, 226, 185); 
+    /* background-color: rgb(150, 173, 194); */
+    color: #343A40; /* Dark Gray */
+}
+
+main {
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+.about-intro,
+.mission,
+.values,
+.team,
+.contact {
+    margin-bottom: 40px;
+    background: #1275e6c7; 
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #101112; /* Bright Blue */
+    font-weight: bold;
+}
+
+p {
+    color: white;
+    line-height: 1.9em;
+    font-size: 1.3em;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ul li {
+    color: aliceblue;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.member {
+    text-align: center;
+    padding: 10px;
+    background: #f1f1f1;
+    border-radius: 8px;
+    width: 30%;
+}
+
+.member h3 {
+    margin: 10px 0;
+    color: #28A745; /* Green */
+    font-weight: bold;
+}
+
+.member p {
+    color: #343A40;
+}
+
+.contact a {
+    color: #89fb06; /* Bright Blue */
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}

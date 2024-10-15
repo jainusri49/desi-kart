@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login/Signup Form</title>
+    <link rel="stylesheet" href="form2.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h2 id="formTitle">Login</h2>
+            <div class="input-field animated" id="userField">
+                <input type="text" id="username" placeholder="Username" required autocomplete="off" />
+            </div>
+            <div class="input-field animated" id="emailField" style="display: none;">
+                <input type="email" id="email" placeholder="Email" required autocomplete="off" />
+            </div>
+            <div class="input-field animated" id="numberField" style="display: none;">
+                <input type="tel" id="number" placeholder="Contact Number" required autocomplete="off" />
+            </div>
+            <div class="input-field animated">
+                <input type="password" id="password" placeholder="Password" required autocomplete="off" />
+            </div>
+            <div class="input-field animated" id="confirmPasswordField" style="display: none;">
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required autocomplete="off" />
+            </div>
+            <button class="btn animated" id="actionBtn">Login</button>
+            <p id="toggleText" class="animated">
+                Don't have an account? <a href="#" id="toggleLink">Sign Up</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
